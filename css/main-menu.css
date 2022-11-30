@@ -1,0 +1,28 @@
+
+.content {
+	gap: 10%;
+}
+
+.content > .button,
+.content > button {
+	width: 70%;
+	height: 20%;
+}
+
+.content > input {
+	height: 10%;
+	width: 80%;
+}
+
+.content.signup,
+.content.login {
+	gap: 2.5%;
+}
+.content.signup :last-child,
+.content.login	:last-child {
+	margin-top: 5%;
+}
+.content.signup :last-child > *,
+.content.signup :last-child > * {
+	margin: 0;
+}
