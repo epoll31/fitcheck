@@ -16,12 +16,9 @@ function signUpSubmit() {
 			let email		 = document.getElementById('email');
 	
 			fcdb.addUser(username.value, password.value, phone.value, email.value);
-	
-			console.log(fcdb.users);
-			fcdb.push();
 		}
 	}
 
-	location.href = '../pages/login.html';
+	//location.href = '../pages/login.html';
 };
 

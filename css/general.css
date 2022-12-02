@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;900&display=swap');
 
 :root {
@@ -88,10 +89,10 @@ button {
 	/*background-image: linear-gradient(-420deg, #FFF1EB, #FFC6AD);*/
 
 	border-color: var(--alt-color-1);
-	border-style: none solid solid none;
 	border-style: solid none none solid;
 	border-width: 15px;
 	border-radius: 6ch;
+	transition: border 50ms;
 	
 	color: var(--fg-color-2);
 	background-color: var(--alt-color-2);
@@ -112,6 +113,7 @@ button {
 
 button:active {
 	border-width: 10px;
+	border-style: none solid solid none;
 }
 
 input {

@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="../css/general.css"/>
 		<link rel="stylesheet" href="../css/main-menu.css"/>
 		<script type="text/javascript" src="../utils/fcdb.js"></script>
-		<script type="text/javascript" src="../utils/userInfo.js" ></script>
+		<script type="text/javascript" src="../utils/signUp.js" ></script>
 	</head>
 
 	<body >
@@ -15,13 +15,13 @@
 			<p>SignUp.</p>
 		</header>
 
-		<form class='content signup' name="signUpForm">
+		<div class='content signup' name="signUpForm">
 			<input type="text" name="username" placeholder="Username." required/>
 			<input type="password" name="password" placeholder="Password." required/>
 			<input type="tel" name="phone" placeholder="PhoneNumber." >
 			<input type="email" name="email" placeholder="Email." >
-			<button onclick="signUpSubmit()"> SignUp. </button>
-		</form>
+			<button onclick="signUpSubmit();"> SignUp. </button>
+		</div>
 
 		<footer>
 			<p onclick="location.href = '../index.html'">FitCheck.</p>
