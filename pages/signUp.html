@@ -6,10 +6,14 @@
 		
 		<link rel="stylesheet" href="../css/general.css"/>
 		<link rel="stylesheet" href="../css/main-menu.css"/>
-		<script type="text/javascript" src="../utils/fcdb.js"></script>
-		<script type="text/javascript" src="../utils/signUp.js" ></script>
 	</head>
+	<script>	
+		
+		function signUp() {
+			location.href = '../pages/profile.html';
+		}
 
+	</script>
 	<body >
 		<header>
 			<p>SignUp.</p>
@@ -20,7 +24,7 @@
 			<input type="password" name="password" placeholder="Password." required/>
 			<input type="tel" name="phone" placeholder="PhoneNumber." >
 			<input type="email" name="email" placeholder="Email." >
-			<button onclick="signUpSubmit();"> SignUp. </button>
+			<button onclick="signUp()"> SignUp. </button>
 		</div>
 
 		<footer>

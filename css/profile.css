@@ -1,0 +1,16 @@
+
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+}
+
+.content > .fit {
+	width: 90%;
+	margin-bottom: 50px;
+}
+
+
+
+
+

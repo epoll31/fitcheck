@@ -1,7 +1,6 @@
 window.onload = (e) => {
 	console.log('onload:');
 	fcdb.pull();
-	fcdb.logout();
 };
 
 window.onunload = (e) => {
@@ -30,7 +29,9 @@ let fcdb = {
 	push: () => {
 		console.log('push: \t_fcdb');
 		console.log(_fcdb);
-		localStorage.setItem('_fcdb', JSON.stringify(_fcdb));
+
+		
+		//localStorage.setItem('_fcdb', JSON.stringify(_fcdb));
 		console.log('\tsuccess');
 	},
 	pull: () => {

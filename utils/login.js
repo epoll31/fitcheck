@@ -1,4 +1,8 @@
 
+window.onload = (e) => {
+	console.log('login: onload:');
+	fcdb.logout();
+}
 
 const tryLogin = () => {
 	let username = document.getElementById('username');
@@ -8,7 +12,8 @@ const tryLogin = () => {
 	
 		if (user) {
 			location.href = './profile.html';
-		}}
+		}
+	}
 };
 
 

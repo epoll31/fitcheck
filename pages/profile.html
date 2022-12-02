@@ -6,19 +6,45 @@
 
 		<link rel="stylesheet" href="../css/general.css"/>
 		<link rel="stylesheet" href="../css/main-menu.css"/>
-		<script type="text/javascript" src="../utils/fcdb.js"></script>
-		<script type="text/javascript" src="../utils/profile.js" ></script>
-
+		<link rel="stylesheet" href="../css/profile.css"/>
 
 	</head>
+	<script>
+		let user = {
+			username: 'ethan',
+			email: 'espollack@wpi.edu'
+		};
+
+		window.onload = (e) => {
+			document.getElementById('headerUsername').innerText = user.username + '.';
+		};
+	</script>
 	<body >
 		<header>
-			<p>Profile.</p>
+			<p id='headerUsername' >Profile.</p>
 		</header>
 
-		
+		<div class='content'>
+			<div class='fit'>
+				<div class='images'>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<div class='tags'>
+					<div>family</div>
+					<div>summer</div>
+				</div>
+			</div>
+			<button onclick="location.href = '../pages/closet.html'">Closet.</button>
+			<button>Fits.</button>
+			<button>Social.</button>
+
+		</div>
+
 		<footer>
-			<p onclick="location.href = '../index.html'">FitCheck.</p>
+			<p onclick="location.href = '../pages/profile.html'">FitCheck.</p>
 		</footer>
 	</body>
 </html
