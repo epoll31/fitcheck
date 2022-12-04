@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>FitCheck. | Login.</title>
+		<title>FitCheck. | Closet.</title>
 
 		<link rel="stylesheet" href="../css/general.css"/>
 		<link rel="stylesheet" href="../css/closet.css"/>
 
 	</head>
-	<script>
-		function login() {
-			location.href = '../pages/profile.html';
-		}
-	</script>
+
 	<body >
 		<header>
 			<p>Closet.</p>
@@ -27,7 +23,8 @@
 			</div>
 			<div class='results'>
 				<div class='result'>
-					<div class='image'></div>
+					<div 	class='image' 
+								onclick="location.href='../pages/item.html'"></div>
 					<div class='tags'>
 						<div>bathing suit</div>
 						<div>shorts</div>
@@ -37,7 +34,8 @@
 					</div>
 				</div>
 				<div class='result'>
-					<div class='image'></div>
+					<div 	class='image'
+								onclick="location.href='../pages/item.html'"></div>
 					<div class='tags'>
 						<div>khaki</div>
 						<div>shorts</div>
@@ -45,12 +43,15 @@
 						<div>summer</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 
+		<button class='add' >
+				<img src="../assets/add.svg"/>
+		</button>
+
 		<footer>
-			<p onclick="location.href = '../pages/profile.html'">FitCheck.</p>
+			<p class='center' onclick="location.href = '../pages/profile.html'">FitCheck.</p>
 		</footer>
 	</body>
-</html
+</html>

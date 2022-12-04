@@ -164,4 +164,6 @@ input {
   justify-content: center;
   align-content: center;
 }
-
+.fit > .tags {
+	flex-wrap: nowrap;
+}

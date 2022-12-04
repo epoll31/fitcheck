@@ -1,17 +1,17 @@
 
-.content.closet {
+.content{
 	display: flex;
 	flex-direction: column;
 }
 
-.content.closet > .search {
+.content> .search {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
 
 	flex-grow: 0;
 }
-.content.closet > .results {
+.content> .results {
 	width: 100%;
 	flex-grow: 1;
 
@@ -20,7 +20,7 @@
 	gap: 15%;
 }
 
-.content.closet > .results > .result {
+.content> .results > .result {
 	display: flex;
 	flex-direction: row;
 	
@@ -29,7 +29,7 @@
 	overflow: scroll;
 }
 
-.content.closet > .results > .result > .image {
+.content> .results > .result > .image {
 	position: sticky;
 	left: 0px;
 	flex: 0 0 auto;
@@ -38,7 +38,7 @@
 	background-color: var(--fg-color-1);
 	border-radius: 25px;
 }
-.content.closet > .results > .result > .tags {
+.content> .results > .result > .tags {
 	flex: 1 0 auto;
 	height: 250px;
 
@@ -47,9 +47,28 @@
 	align-content: center;
 }
 
-.content.closet > .results > .result > .tags > * {
+.content> .results > .result > .tags > * {
 	flex: 0 1 auto;
 	height: min-content;
 	margin: 0;
 }
 
+.add {
+	position: absolute;
+	right: 60px;
+	bottom: 60px;
+	aspect-ratio: 1/1;
+	padding: 30px;
+}
+
+.add > img {
+	aspect-ratio: 1/1;
+	width: 60px;
+	padding: 20px;
+	transition: all 100ms;
+}
+
+.add:active > img {
+	width: 80px;
+	padding: 10px;
+}
