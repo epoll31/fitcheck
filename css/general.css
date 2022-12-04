@@ -149,6 +149,7 @@ input {
 	background-color: var(--fg-color-1);
 	border-radius: 25px;
 }
+
 .tags {
 	display: flex;
 	flex-flow: row wrap;
@@ -166,4 +167,8 @@ input {
 }
 .fit > .tags {
 	flex-wrap: nowrap;
+}
+
+.nodisp {
+	display: none;
 }

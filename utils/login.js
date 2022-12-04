@@ -1,21 +1,27 @@
 
-window.onload = (e) => {
-	console.log('login: onload:');
-	fcdb.logout();
-}
+const users = [ {
+	username: 'edog',
+	password: 'edog',
+	phone: '',
+	email: ''
+} ];
 
-const tryLogin = () => {
-	let username = document.getElementById('username');
-	let password = document.getElementById('password');
-	if (username && username.value && password && password.value) {
-		let user = fcdb.login(username.value, password.value);
-	
-		if (user) {
-			location.href = './profile.html';
-		}
+const login = () => {
+	const username = document.getElementById('username');
+	const password = document.getElementById('password');
+	const user = users.find(user => 
+		user.username === username.value &&
+		user.password === password.value);
+	console.log(user);
+	if (user) {
+		console.log(JSON.stringify(user));
+		window.localStorage.setItem('activeUser', JSON.stringify(user));
+		location.href = '../pages/profile.html';
+	}
+	else {
+		localStorage.setItem('activeUser', undefined);
 	}
 };
-
 
 
 
