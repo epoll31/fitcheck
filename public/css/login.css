@@ -1,0 +1,10 @@
+.content {
+	gap: 3%;
+}
+
+.content > button {
+}
+
+.content > input {
+	width: 70%;
+}
