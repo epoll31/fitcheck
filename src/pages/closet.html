@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>FitCheck. | Closet.</title>
+
+		<link rel="stylesheet" href="/static/css/general.css"/>
+		<link rel="stylesheet" href="/static/css/closet.css"/>
+
+		<script type="text/javascript" src='/static/utils/closet.js'></script>
+	</head>
+
+	<body >
+		<header>
+			<p>Closet.</p>
+		</header>
+
+		<div class='content closet'>
+			<div class='search'>
+				<input 	type="text" 
+								id="searchInput" 
+								oninput="loadTags()"
+								onchange="addTag()"
+								placeholder="search by tags."/>
+				<div class='tags' id='searchTags'>
+				</div>
+			</div>
+			<div class='results' id='results'>
+				<div class='result'>
+					<div 	class='image' 
+								onclick=""></div>
+					<div class='tags'>
+						<div>bathing suit</div>
+						<div>shorts</div>
+						<div>target</div>
+						<div>summer</div>
+						<div>red</div>
+					</div>
+				</div>
+				<div class='result'>
+					<div 	class='image'
+								onclick=""></div>
+					<div class='tags'>
+						<div>khaki</div>
+						<div>shorts</div>
+						<div>amazon</div>
+						<div>summer</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button class='add'>
+				<img src="/static/assets/add.svg"/>
+		</button>
+
+		<footer>
+			<p class='center' onclick="location.href = './profile'">FitCheck.</p>
+		</footer>
+	</body>
+</html>

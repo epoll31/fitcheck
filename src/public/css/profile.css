@@ -1,0 +1,35 @@
+
+
+.content {
+	display: flex;
+	gap: 25px;
+	flex-flow: column nowrap;
+	overflow: hidden;
+}
+
+.content > .fit {
+	width: 90%;
+	margin-bottom: 50px;
+}
+
+.content > button {
+	width: 60%;
+}
+
+.logout {
+	position: absolute;
+	right: 60px;
+	bottom: 60px;
+	aspect-ratio: 1/1;
+	padding: 30px;
+}
+
+.logout > img {
+	aspect-ratio: 1/1;
+	width: 100px;
+}
+
+
+
+
+

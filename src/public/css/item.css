@@ -1,0 +1,42 @@
+
+.content {
+	gap: 5%;
+}
+
+.content > .image {
+	flex: 0 1 auto;
+	aspect-ratio: 1/1;
+	width: 70%;
+
+	background-color: var(--fg-color-1);
+	border-radius: 25px;
+}
+
+.content > .tagsInput {
+	flex: 1 1 auto;
+
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	gap: 5%;
+}
+.content > .tagsInput > input {
+	width: 60%;
+}
+.content > .tagsInput > .tags {
+	flex: 0 0 auto;
+	display: flex;
+	flex-flow: row wrap;
+	overflow: scroll;
+}
+
+.content > button {
+	flex: 0 1 auto;
+}
+
+.tags > .new {
+	background-color: var(--alt-color-2);
+}
+
+
