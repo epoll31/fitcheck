@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode=production --define-process-env-node-env=production",
+    "build": "webpack --mode=development",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --define-process-env-node-env=production",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+		"start": "node src/index.js"
   },
   "repository": {
     "type": "git",
