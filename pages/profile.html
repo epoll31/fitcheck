@@ -4,21 +4,13 @@
 	<head>
 		<title>FitCheck. | Profile.</title>
 
-		<link rel="stylesheet" href="../css/general.css"/>
-		<link rel="stylesheet" href="../css/main-menu.css"/>
-		<link rel="stylesheet" href="../css/profile.css"/>
+		<link rel="stylesheet" href="/static/css/general.css"/>
+		<link rel="stylesheet" href="/static/css/main-menu.css"/>
+		<link rel="stylesheet" href="/static/css/profile.css"/>
 
+		<script type="text/javascript" src='/static/utils/profile.js'></script>
 	</head>
-	<script>
-		let user = {
-			username: 'edog',
-			email: 'espollack@wpi.edu'
-		};
-
-		window.onload = (e) => {
-			document.getElementById('headerUsername').innerText = user.username + '.';
-		};
-	</script>
+	
 	<body >
 		<header>
 			<p id='headerUsername' >Profile.</p>
@@ -37,18 +29,18 @@
 					<div>summer</div>
 				</div>
 			</div>
-			<button onclick="location.href = '../pages/closet.html'">Closet.</button>
-			<button onclick="location.href = '../pages/fits.html'">Fits.</button>
+			<button onclick="location.href = './closet'">Closet.</button>
+			<button onclick="location.href = './fits'">Fits.</button>
 			<button>Social.</button>
 
 		</div>
 
-		<button class='logout' onclick="location.href='../index.html'">
-				<img src="../assets/logout.png"/>
+		<button class='logout' onclick="location.href='./'">
+				<img src="/static/assets/logout.png"/>
 			</button>
 
 		<footer>
-			<p onclick="location.href = '../pages/profile.html'">FitCheck.</p>
+			<p onclick="location.href = './profile'">FitCheck.</p>
 				</footer>
 	</body>
 </html

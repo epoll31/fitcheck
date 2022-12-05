@@ -3,9 +3,10 @@
 	<head>
 		<title>FitCheck. | Closet.</title>
 
-		<link rel="stylesheet" href="../css/general.css"/>
-		<link rel="stylesheet" href="../css/closet.css"/>
+		<link rel="stylesheet" href="/static/css/general.css"/>
+		<link rel="stylesheet" href="/static/css/closet.css"/>
 
+		<script type="text/javascript" src='/static/utils/closet.js'></script>
 	</head>
 
 	<body >
@@ -15,16 +16,18 @@
 
 		<div class='content closet'>
 			<div class='search'>
-				<input type="text" id="searchInput" placeholder="search by tags."/>
-				<div class='tags'>
-					<div>summer</div>
-					<div>shorts</div>
+				<input 	type="text" 
+								id="searchInput" 
+								oninput="loadTags()"
+								onchange="addTag()"
+								placeholder="search by tags."/>
+				<div class='tags' id='searchTags'>
 				</div>
 			</div>
-			<div class='results'>
+			<div class='results' id='results'>
 				<div class='result'>
 					<div 	class='image' 
-								onclick="location.href='../pages/item.html'"></div>
+								onclick="location.href='./item'"></div>
 					<div class='tags'>
 						<div>bathing suit</div>
 						<div>shorts</div>
@@ -35,7 +38,7 @@
 				</div>
 				<div class='result'>
 					<div 	class='image'
-								onclick="location.href='../pages/item.html'"></div>
+								onclick=""></div>
 					<div class='tags'>
 						<div>khaki</div>
 						<div>shorts</div>
@@ -47,11 +50,11 @@
 		</div>
 
 		<button class='add'>
-				<img src="../assets/add.svg"/>
+				<img src="/static/assets/add.svg"/>
 		</button>
 
 		<footer>
-			<p class='center' onclick="location.href = '../pages/profile.html'">FitCheck.</p>
+			<p class='center' onclick="location.href = './profile'">FitCheck.</p>
 		</footer>
 	</body>
 </html>

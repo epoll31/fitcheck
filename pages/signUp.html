@@ -4,31 +4,27 @@
 		<title>FitCheck. | SignUp.</title>
 
 		
-		<link rel="stylesheet" href="../css/general.css"/>
-		<link rel="stylesheet" href="../css/main-menu.css"/>
-	</head>
-	<script>	
-		
-		function signUp() {
-			location.href = '../pages/profile.html';
-		}
+		<link rel="stylesheet" href="/static/css/general.css"/>
+		<link rel="stylesheet" href="/static/css/signUp.css"/>
+		<script type='text/javascript' src='/static/utils/signUp.js' ></script>
+	
+		</head>
 
-	</script>
-	<body >
+	<body> 
 		<header>
 			<p>SignUp.</p>
 		</header>
 
-		<div class='content signup' name="signUpForm">
-			<input type="text" name="username" placeholder="Username." required/>
-			<input type="password" name="password" placeholder="Password." required/>
-			<input type="tel" name="phone" placeholder="PhoneNumber." >
-			<input type="email" name="email" placeholder="Email." >
-			<button onclick="signUp()"> SignUp. </button>
+		<div class='content signup'>
+			<input type="text" id="username" placeholder="Username." required/>
+			<input type="password" id="password" placeholder="Password." required/>
+			<input type="tel" id="phone" placeholder="PhoneNumber." >
+			<input type="email" id="email" placeholder="Email." >
+			<button onclick="signUpSubmit()"> SignUp. </button>
 		</div>
 
 		<footer>
-			<p onclick="location.href = '../index.html'">FitCheck.</p>
+			<p onclick="location.href = './'">FitCheck.</p>
 		</footer>
 	</body
 </html>
