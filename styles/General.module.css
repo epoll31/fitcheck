@@ -1,0 +1,106 @@
+
+@font-face {
+	font-family: 'raleway';
+	src: url('../public/Raleway.ttf');
+}
+
+.main {
+	background-color: #DBD3D8;
+	font-family: 'raleway';
+
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+
+	display: grid;
+	grid-template-rows: auto min-content;
+}
+
+.footer {
+	grid-row: 2 / span 1 ; 
+	background-color: #D8B4A0;
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+.footer.nodisp {
+	display: none;
+}
+
+
+
+.home {
+	background-image: url('/home.svg');	
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	background-color: transparent;
+	border: none;
+	border-radius: 1em;
+
+	margin: 0.5em;
+	height: 5em;
+	aspect-ratio: 1 / 1;
+}
+
+.content {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.content.login {
+}
+
+.content.login > h1 {
+	color: #D77A61;
+	font-size: 3em;
+	font-weight: 100;
+	text-decoration: underline;
+	text-underline-offset: 0.5em;
+}
+
+.main input {
+	font-size: 1em;
+	font-weight: 100;
+	text-align: center;
+
+	border: #D77A61 solid 0.1em;
+	border-radius: 1em;
+	margin: 0.5em;
+	padding: 0.5em;
+
+	background-color: #D8B4A0;
+}
+
+.main button {
+	color: #D77A61;
+	font-size: 1.25em;
+	font-weight: 200;
+	text-align: center;
+
+	border: #D77A61 solid 0.1em;
+	border-radius: 1em;
+	margin: 0.5em;
+	padding: 1em;
+
+	background-color: #D8B4A0;
+
+}
+.main button:active {
+	border-color: #EFF1F3;
+	border-width: 0.25em;
+}
+
+
+.login button {
+	width: 8em;
+}
+.footer button {
+	border: none;
+	background-color: transparent;
+}
