@@ -1,23 +1,32 @@
 
-@font-face {
-	font-family: 'raleway';
-	src: url('../public/Raleway.ttf');
-}
 
 .main {
 	background-color: #DBD3D8;
-	font-family: 'raleway';
 
 	width: 100vw;
 	height: 100vh;
 	overflow: hidden;
+}
+.content {
+	position: relative;
+	width: 100%;
+	height: 100%;
 
-	display: grid;
-	grid-template-rows: auto min-content;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
 }
 
 .footer {
-	grid-row: 2 / span 1 ; 
+	position: absolute;
+
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	height: min-content;
+
+
 	background-color: #D8B4A0;
 
 	display: flex;
@@ -25,13 +34,9 @@
 	justify-content: center;
 	align-items: center;
 }
-.footer.nodisp {
-	display: none;
-}
 
 
-
-.home {
+.footer .home {
 	background-image: url('/home.svg');	
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -42,27 +47,15 @@
 	border-radius: 1em;
 
 	margin: 0.5em;
-	height: 5em;
+	height: 3.5em;
 	aspect-ratio: 1 / 1;
+
+	animation: transform 200ms;
+}
+.footer .home:active {
+	transform: scale(110%);
 }
 
-.content {
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: center;
-	align-items: center;
-}
-
-.content.login {
-}
-
-.content.login > h1 {
-	color: #D77A61;
-	font-size: 3em;
-	font-weight: 100;
-	text-decoration: underline;
-	text-underline-offset: 0.5em;
-}
 
 .main input {
 	font-size: 1em;
@@ -89,7 +82,6 @@
 	padding: 1em;
 
 	background-color: #D8B4A0;
-
 }
 .main button:active {
 	border-color: #EFF1F3;
@@ -104,3 +96,35 @@
 	border: none;
 	background-color: transparent;
 }
+
+.content.signUp {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template: 1fr min-content / 1fr;
+
+}
+
+
+.content.signUp .signUp {
+	grid-column: 1 / span 1;	
+	grid-row: 1 / span 1;	
+	width: 100%;
+	height: 100%;
+
+
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.content.signUp .footer {
+	grid-column: 1 / span 1;	
+	grid-row: 2 / span 1;	
+
+	position: relative;
+
+}
+
+
