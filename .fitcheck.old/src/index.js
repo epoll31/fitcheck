@@ -1,13 +1,16 @@
-const express = require('express');
-const path = require('path')
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 const port = 3000;
 
 app.use('/static', express.static(path.join(__dirname, 'public')))
 
 app.get('/', (req, res) => {
-	res.sendFile(path.join(__dirname,'/pages/index.html'));
+	res.sendFile(path.join(__dirname,'/pages/test.html'));
+	//res.sendFile(path.join(__dirname,'/pages/index.html'));
 });
 app.get('/login', (req, res) => {
 	res.sendFile(path.join(__dirname,'/pages/login.html'));
