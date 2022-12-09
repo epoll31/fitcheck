@@ -1,45 +1,72 @@
 import { useState } from 'react';
 import { GetServerSideProps } from 'next';
+import { useRouter } from 'next/router';
 
-import LoginPage from './login';
+
+import LoginMenu from './loginMenu';
 import styles from '../styles/General.module.css';
 import SignUpPage from './signUp';
 
-import fcdb from '../utils/fcdb';
+import { validateUser, userRequest, userResponse } from '../utils/fcdb';
+import { warn } from 'console';
 
+
+let request: userRequest | null = null;
 export const pages = {
 	login: 'login',
 	signUp: 'signUp'
 }
-export const getServerSideProps: GetServerSideProps = async (context) => {
-	const users = JSON.parse(await fcdb.getUsers());
-	
-	//console.log(users);
+
+export const getServerSideProps: GetServerSideProps = async (_) => {
+	let response = request;
+
+	//request = null;
 
 	return {
 		props: {
-			users: users
+			response: request 
 		}
 	};
+
+/*
+	if (request) {
+		response = JSON.parse(await validateUser(request));
+		request = null;
+	}
+
+
+	return {
+		props: {
+			response: response
+		}
+	};
+*/
 }
 
-export default function Home(users: any) {
-	const [activePage, setActivePage] = useState(pages.login);
-
-	console.log(users);
-
-	let page;
-	switch (activePage) {
-		case pages.login: 
-			page = <LoginPage setSignUpPageActive={() => setActivePage(pages.signUp)}/>;
-			break;
-		case pages.signUp:
-			page = <SignUpPage setHomePageActive={() => setActivePage(pages.login)}/>;
-			break;
-	}
+export default function Home(props: any) {
+	const router = useRouter();
+	
+	console.log(props);	
+	
+	const requestLogin = (username: string, password: string) => {
+		request = {
+			username: username,
+			password: password
+		};
+		console.log('login requested: ', request);
+		
+		router.replace({
+			pathname: './',
+			query: {
+				username: 'edog',
+				email: '',
+				phone: ''
+			}
+		}, '/login');
+	};
 
 	return (
 	<div className={styles.main}>
-		{ page }
+		<LoginMenu requestLogin={requestLogin} />
 	</div>);
 }

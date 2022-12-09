@@ -1,5 +1,6 @@
 
-import { MongoClient, ServerApiVersion } from 'mongodb';
+import { MongoClient } from 'mongodb';
+import { updateUnionTypeNode } from 'typescript';
 
 const client = new MongoClient(process.env.fcdb_uri as string);
 
@@ -16,13 +17,50 @@ async function getUsers() {
 	}
 	return output;	
 }
+export async function validateUser(request: userRequest) {
+	let response: userResponse = {
+		//request: request,
+		id: null,
+		username: null,
+		email: null,
+		phone: null
+	}; 
 
-const fcdb = {
-	getUsers: getUsers
-};
-export default fcdb;
+	try {
+		await client.connect();
+
+		let result = await client.db("fcdb").collection("users").findOne({
+			username: request.username,
+			password: request.password
+		});
+
+		if (result) {
+			response.id = 			result.id;
+			response.username = result.username;
+			response.email = 		result.email;
+			response.phone = 		result.phoneNumber;
+		}
+	} finally {
+		client.close();
+	}
+
+	
+	return JSON.stringify(response);
+}
 
 
 
+export interface userRequest {
+	username?: string ,
+	password?: string 
+}
+
+export interface userResponse {
+	//request: userRequest,
+	id: number | null,
+	username: string | null,
+	email: string | null,
+	phone: string | null
+}
 
 
