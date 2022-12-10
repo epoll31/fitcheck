@@ -1,0 +1,11 @@
+{
+  "/_app": "pages/_app.js",
+  "/api/fcdb": "pages/api/fcdb.js",
+  "/_error": "pages/_error.js",
+  "/loginMenu": "pages/loginMenu.html",
+  "/": "pages/index.html",
+  "/closet": "pages/closet.js",
+  "/user": "pages/user.js",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html"
+}
