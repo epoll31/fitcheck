@@ -1,6 +1,5 @@
 
 import { MongoClient } from 'mongodb';
-import { updateUnionTypeNode } from 'typescript';
 
 const client = new MongoClient(process.env.fcdb_uri as string);
 
@@ -48,6 +47,20 @@ export async function validateUser(request: userRequest) {
 	return JSON.stringify(response);
 }
 
+
+
+export interface userRequest {
+	username?: string ,
+	password?: string 
+}
+
+export interface userResponse {
+	//request: userRequest,
+	id: number | null,
+	username: string | null,
+	email: string | null,
+	phone: string | null
+}
 
 
 export interface userRequest {

@@ -7,11 +7,11 @@ interface loginProps {
 export default function LoginMenu(props: loginProps) {
 
 	const handleLogin = (_: any) => {
-		const username = document.getElementById('username');
-		const password = document.getElementById('password');
+		const username = document.getElementById('username') as HTMLInputElement;
+		const password = document.getElementById('password') as HTMLInputElement;
 
-		if (username.checkValidity() && password.checkValidity()) {
-			props.requestLogin(username.value, password.value);
+		if (username?.checkValidity() && password?.checkValidity()) {
+			props.requestLogin(username?.value, password?.value);
 		}
 	};
 
