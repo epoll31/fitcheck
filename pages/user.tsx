@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
-import { validateUser, userResponse } from "../utils/fcdb";
-
+import { userResponse, validateUser } from "./api/fcdb";
+import styles from "../styles/User.module.css";
 
 export async function getServerSideProps(context: any) {
 		
@@ -9,7 +9,7 @@ export async function getServerSideProps(context: any) {
 	const user = await validateUser(request);
 
   return {
-    props: JSON.parse(user) as userResponse, // will be passed to the page component as props
+    props: user, // will be passed to the page component as props
   }
 };
 
@@ -20,9 +20,18 @@ const User = (props: userResponse) => {
 		router.replace('./');
 	}
 
+	const logOut = () => router.replace('./');
+	const closet = () => router.replace({
+		pathname: './closet',
+		query: {
+			id: props.id
+		}
+	}, './closet');
 
-	return <div> 
+	return <div className={styles.content}> 
 		<h1>{props.username}</h1>
+		<button onClick={closet}>Closet.</button>
+		<button onClick={logOut}>LogOut.</button>
 	</div>;
 };
 
