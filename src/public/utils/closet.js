@@ -17,6 +17,12 @@ window.onload = (e) => {
 	loadTags();
 };
 
+const newItem = () => {
+	localStorage.setItem('activeIndex', JSON.stringify(-1));
+
+	location.href='./item';
+}
+
 const addTag = () => {
 	const input = document.getElementById('searchInput');
 	const value = input.value.trim();

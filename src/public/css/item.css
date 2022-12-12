@@ -12,6 +12,13 @@
 	border-radius: 25px;
 }
 
+.content > .menu {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
 .content > .tagsInput {
 	flex: 1 1 auto;
 
@@ -20,15 +27,18 @@
 	justify-content: center;
 	align-items: center;
 	gap: 5%;
+	
+	width: 100%;
 }
 .content > .tagsInput > input {
-	width: 60%;
+	flex: 0 0 auto;
+
+	width: 8em;
 }
 .content > .tagsInput > .tags {
-	flex: 0 0 auto;
-	display: flex;
-	flex-flow: row wrap;
-	overflow: scroll;
+	flex: 1 1 auto;
+
+	width: 100%;
 }
 
 .content > button {

@@ -83,7 +83,7 @@ footer {
 	flex-flow: nowrap column;
 	justify-content: center;
 	align-items: center;
-	overflow: scroll;
+	overflow: hidden scroll;
 }
 
 button {
@@ -154,16 +154,21 @@ input {
 
 .tags {
 	display: flex;
-	flex-flow: row wrap;
-	overflow: scroll;
-	gap: 5px 5px;
+	flex-flow: column wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 0.25em 0.25em;
+	max-height: 20em;
+	border-radius: 2em;
+
+	overflow: scroll hidden;
 }
 .tags > * {
 	background-color: var(--alt-color-1);
 	border-radius: 50px;
 	font-size: 50px;
-	padding: 15px 35px;
-	margin: 5px;
+	padding: 0.25em 0.8em;
+	margin: 0.1em;
 
   justify-content: center;
   align-content: center;

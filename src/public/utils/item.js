@@ -6,6 +6,13 @@ window.onload = (_) => {
 	index = JSON.parse(localStorage.getItem('activeIndex'));	
 	user = JSON.parse(localStorage.getItem('activeUser'));
 
+	if (index == -1) {
+		index = user.items.length;
+		user.items.push({ 
+			tags: ['newly added']
+		});
+	}
+
 	loadTags();
 }
 
@@ -47,7 +54,6 @@ const loadTags = () => {
 				else {
 					user.items.at(index).tags.push(tag);
 				}
-				push();
 				loadTags();
 			};
 			tags.appendChild(el);
@@ -65,7 +71,6 @@ const loadTags = () => {
 			else {
 				user.items.at(index).tags.push(tag);
 			}
-			push();
 			loadTags();
 		};
 	}
@@ -80,7 +85,6 @@ const addTag = () => {
 
 	user.items.at(index).tags.push(value);
 
-	push();
 	loadTags();
 }
 
