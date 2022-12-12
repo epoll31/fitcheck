@@ -18,6 +18,9 @@
 .content > .search > input {
 	width: 70%;
 }
+.content > .search > .tags {
+	width: 80%;
+}
 .content> .results {
 	width: 100%;
 	flex-grow: 1;
