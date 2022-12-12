@@ -60,4 +60,16 @@ button:active {
 	border-color: #EFF1F3;
 }
 
+input {
+	font-size: 1em;
+	font-weight: 100;
+	text-align: center;
+
+	border: #D77A61 solid 0.1em;
+	border-radius: 1em;
+	margin: 0.5em;
+	padding: 0.5em;
+
+	background-color: #D8B4A0;
+}
 

@@ -2,6 +2,25 @@ import { MongoClient } from "mongodb";
 
 const client = new  MongoClient(process.env.fcdb_uri as string);
 
+export async function userExists(username: string) {
+	let output = false;
+	try {
+		await client.connect();
+
+		let result = await client.db("fcdb").collection("users").findOne({
+			username: username
+		});
+		if (result) {
+			output = true;	
+		}
+	} finally {
+		client.close();
+	}
+
+	return output;
+}
+
+
 export async function validateUser(request: userRequest) {
 	let response: userResponse = {
 		//request: request,

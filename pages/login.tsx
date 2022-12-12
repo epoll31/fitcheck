@@ -1,21 +1,21 @@
-import styles from '../styles/General.module.css';
+//import styles from '../styles/General.module.css';
+import menu from '../styles/Menu.module.css';
+import { useAuth } from '../utils/useAuth';
 
-interface loginProps {
-	requestLogin: (username: string, password: string) => void	
-};
+export default function Login(props: {}) {
 
-export default function LoginMenu(props: loginProps) {
+	const { user, logIn} = useAuth();
 
 	const handleLogin = (_: any) => {
 		const username = document.getElementById('username') as HTMLInputElement;
 		const password = document.getElementById('password') as HTMLInputElement;
 
 		if (username?.checkValidity() && password?.checkValidity()) {
-			props.requestLogin(username?.value, password?.value);
+			logIn(username.value, password.value);
 		}
 	};
 
-	return (<div className={styles.content + ' ' + styles.login}> 
+	return (<div className={menu.content}> 
 		
 		<h1>FitCheck.</h1>
 
@@ -32,6 +32,7 @@ export default function LoginMenu(props: loginProps) {
 		<button id='loginBtn' 
 						onClick={handleLogin} >Login.</button>
 		<button id='signUpBtn' >SignUp. </button>
+		{ JSON.stringify(user) }
 
 		</div>);
 };
