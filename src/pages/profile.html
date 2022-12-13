@@ -12,7 +12,7 @@
 	
 	<body >
 		<header>
-			<p id='headerUsername' >Profile.</p>
+			<h1 id='headerUsername' >Profile.</h1>
 		</header>
 
 		<div class='content'>
@@ -33,12 +33,14 @@
 			<button>Social.</button>
 		</div>
 
-		<button class='logout' onclick="location.href='./'">
-				<img src="/static/assets/logout.png"/>
-			</button>
-
+		
 		<footer>
-			<p onclick="location.href = './profile'">FitCheck.</p>
+			<p class='center' onclick="location.href = './profile'">FitCheck.</p>
+			<div class='right' >
+				<button class='circle' onclick="location.href='./'">
+					<img src="/static/assets/logout.png"/>
+				</button>
+			</div>
 		</footer>
 	</body>
 </html

@@ -1,0 +1,30 @@
+
+
+.item {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+
+	background-color: #d8b4a050;
+	height: 20rem;
+	border-radius: 2rem;
+	padding: 2rem;
+	gap: 1rem;
+}
+
+.item .image {
+	flex: 0 1 auto;
+	aspect-ratio: 1/1;
+	height: 100%;
+
+	border-radius: 2rem;
+	background-color: var(--fg-color-1);
+}
+
+.item .tags {
+	flex: 1 1 auto;
+}
+
+
+

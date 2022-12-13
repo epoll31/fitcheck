@@ -1,0 +1,64 @@
+
+h1 {
+	text-align: center;
+	font-size: 10em;
+	font-weight: bold;
+	margin: 0px;
+	text-decoration: underline;
+	text-underline-offset: 25%;
+	text-decoration-thickness: 5%;
+}
+
+button {
+	border-color: var(--alt-color-1);
+	border-style: solid none none solid;
+	border-width: 15px;
+	border-radius: 6ch;
+	transition: border 50ms;
+	
+	color: var(--fg-color-2);
+	background-color: var(--alt-color-2);
+	font-family: 'Raleway', sans-serif;
+	font-size: 6em;
+	margin: 15px 20px;
+	padding: 30px 60px;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	justify-self: center;
+	text-align: center;
+
+	cursor: pointer;
+}
+
+button:active {
+	border-width: 10px;
+	border-style: none solid solid none;
+}
+
+button.circle {
+	padding: 2.5rem;
+	aspect-ratio: 1/1;
+}
+button > img {
+	width: 5rem;
+}
+
+
+
+input {
+	border-color: var(--alt-color-2);
+	background-color: var(--bg-color-2);
+	
+	color:var(--fg-color);
+	font-family: 'Raleway', sans-serif;
+	font-size: 4em;
+	border-radius: 3ch;	
+	border: none;
+	text-align: center;
+	padding: 15px 25px;
+}
+

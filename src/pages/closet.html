@@ -11,7 +11,7 @@
 
 	<body >
 		<header>
-			<p>Closet.</p>
+			<h1>Closet.</h1>
 		</header>
 
 		<div class='content closet'>
@@ -25,36 +25,18 @@
 				</div>
 			</div>
 			<div class='results' id='results'>
-				<div class='result'>
-					<div 	class='image' 
-								onclick=""></div>
-					<div class='tags'>
-						<div>bathing suit</div>
-						<div>shorts</div>
-						<div>target</div>
-						<div>summer</div>
-						<div>red</div>
-					</div>
-				</div>
-				<div class='result'>
-					<div 	class='image'
-								onclick=""></div>
-					<div class='tags'>
-						<div>khaki</div>
-						<div>shorts</div>
-						<div>amazon</div>
-						<div>summer</div>
-					</div>
-				</div>
+				
 			</div>
 		</div>
 
-		<button class='add' onclick="newItem()">
-				<img src="/static/assets/add.svg"/>
-		</button>
-
 		<footer>
+
 			<p class='center' onclick="location.href = './profile'">FitCheck.</p>
+			<div class='right'>
+				<button class='circle' onclick="newItem()">
+					<img src="/static/assets/add.svg"/>
+				</button>
+			</div>
 		</footer>
 	</body>
 </html>

@@ -100,7 +100,7 @@ const loadResults = () => {
 		const img = document.createElement('div');
 		const tags = document.createElement('div');
 
-		el.classList.add('result');
+		el.classList.add('item');
 		img.classList.add('image');
 		img.onclick = (e) => {
 			localStorage.setItem('activeIndex', JSON.stringify(user.items.indexOf(item)));

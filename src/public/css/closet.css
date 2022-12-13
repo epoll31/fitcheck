@@ -1,33 +1,39 @@
 
-.content{
-	display: flex;
-	flex-direction: column;
-	gap: 50px;
+
+.content {
+	justify-content: flex-start;
+	gap: 5rem ;
+
+	margin: 2.5rem;
+	padding: 2.5rem;
+	background-color: #d8b4a050;
+	border-radius: 2rem;
 }
 
-.content> .search {
+
+.content > .search {
 	display: flex;
-	flex-direction: column;
-	gap: 30px;
-
-	flex-grow: 0;
-
+	flex-flow: column nowrap;
 	justify-content: center;
 	align-items: center;
+	gap: 1.5rem;
+
+	flex: 0 0 auto;
 }
 .content > .search > input {
 	width: 70%;
 }
 .content > .search > .tags {
-	width: 80%;
+	width: 90%;
 }
 .content> .results {
 	width: 100%;
-	flex-grow: 1;
+
+	flex: 1 0 auto;
 
 	display: flex;
-	flex-direction: column;
-	gap: 15px;
+	flex-flow: column nowrap;
+	gap: 1rem;
 }
 
 .content> .results > .result {
@@ -35,8 +41,6 @@
 	flex-flow: row nowrap;
 	gap: 1em;
 	height: 20em;
-
-	
 }
 
 .content> .results > .result > .image {

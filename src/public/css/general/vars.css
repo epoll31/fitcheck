@@ -1,0 +1,13 @@
+
+:root {
+	--bg-color: #F7EBEC;
+	--fg-color-1: #292F36;
+	--fg-color-2: #292F36;
+	--alt-color-1: #FF6B6B;
+	--alt-color-2: #4ECDC4;
+	--bg-color-2: #EBF1FF;
+}
+
+.nodisp {
+	display: none;
+}
